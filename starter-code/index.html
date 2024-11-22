@@ -1,60 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Designo Agency Website Challenge</title>
-</head>
-<body>
-  Our Company
-  Locations
-  Contact
-  
-  Award-winning custom designs and digital branding solutions
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
-  and engaging brand experiences. Find out more about our services.
-  
-  Learn more
-  
-  Web Design
-  View Projects
-  
-  App Design
-  View Projects
-  
-  Graphic Design
-  View Projects
-  
-  Passionate
-  Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge
-  art, design, and technology into exciting new solutions.
-  
-  Resourceful
-  Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer
-  collaboration. It guarantees superior results that fulfill our clients’ needs.
-  
-  Friendly
-  We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we
-  strive to give them the best experience a company can provide.
-  
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
-  Get in touch
-  
-  Our company
-  Locations
-  Contact
-  
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-  
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
-</body>
+    <title>Frontend Mentor | Designo Agency Website Challenge</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="primary-navigation">
+        <img
+          src="./assets/shared/desktop/logo-dark.png"
+          alt="Designo Logo"
+          class="logo"
+        />
+        <ul class="nav-links">
+          <li><a href="#">Our Company</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="site-hero">
+        <div class="hero-content">
+          <h1>Award-winning custom designs and digital branding solutions</h1>
+          <p>
+            With over 10 years in the industry, we are experienced in creating
+            fully responsive websites, app design, and engaging brand
+            experiences. Find out more about our services.
+          </p>
+          <button class="btn" data-theme="dark">Learn more</button>
+        </div>
+        <div class="hero-image">
+          <img
+            src="./assets/home/desktop/image-hero-phone.png"
+            alt="Hero Image"
+          />
+        </div>
+      </section>
+      <section class="services">
+        <div class="card">
+          <h2>Web Desing</h2>
+          <p>view projects</p>
+        </div>
+        <div class="card">
+          <h2>App Design</h2>
+          <p>view projects</p>
+        </div>
+        <div class="card">
+          <h2>Graphic Design</h2>
+          <p>view projects</p>
+        </div>
+      </section>
+      <section class="qualifications">
+        <div class="qualification">
+          <img src="./assets/home/desktop/illustration-passionate.svg" alt="" />
+          <h3>Passionate</h3>
+          <p>
+            Each project starts with an in-depth brand research to ensure we
+            only create products that serve a purpose. We merge art, design, and
+            technology into exciting new solutions.
+          </p>
+        </div>
+        <div class="qualification">
+          <img
+            src="./assets/home/desktop/illustration-resourceful.svg"
+            alt=""
+          />
+          <h3>Resourceful</h3>
+          <p>
+            Everything that we do has a strategic purpose. We use an agile
+            approach in all of our projects and value customer collaboration. It
+            guarantees superior results that fulfill our clients' needs.
+          </p>
+        </div>
+        <div class="qualification">
+          <img src="./assets/home/desktop/illustration-friendly.svg" alt="" />
+          <h3>Friendly</h3>
+          <p>
+            We are a group of enthusiastic folks who know how to put people
+            first. Our success depends on our customers, and we strive to give
+            them the best experience a company can provide.
+          </p>
+        </div>
+      </section>
+      <section class="hero call-to-action" data-position="button">
+        <div>
+          <div>Let's talk about your project</div>
+          <p>
+            Ready to take it to the next level? Contact us today and find out
+            how our expertise can help your business grow.
+          </p>
+        </div>
+        <button class="btn" data-theme="dark">Get in touch</button>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <nav class="footer-navigation">
+          <img
+            src="./assets/shared/desktop/logo-light.png"
+            alt="Designo Logo"
+          />
+          <ul>
+            <li><a href="#">Our Company</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-content">
+        <div class="footer-content-left">
+          <div class="footer-location">
+            <p>Designo Central Office</p>
+            <p>3886 Wellington Street</p>
+            <p>Toronto, Ontario M9C 3J5</p>
+          </div>
+          <div class="footer-contact">
+            <p>Contact Us (Central Office)</p>
+            <p>P : +1 253-863-8967</p>
+            <p>M : contact@designo.co</p>
+          </div>
+        </div>
+        <div class="footer-content-right">
+          <img src="./assets/shared/desktop/icon-facebook.svg" alt="" />
+          <img src="./assets/shared/desktop/icon-youtube.svg" alt="" />
+          <img src="./assets/shared/desktop/icon-twitter.svg" alt="" />
+          <img src="./assets/shared/desktop/icon-pinterest.svg" alt="" />
+          <img src="./assets/shared/desktop/icon-instagram.svg" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

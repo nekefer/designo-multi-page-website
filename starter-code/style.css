@@ -1,0 +1,123 @@
+/* to reset the css properties of all elements to their default values */
+@layer reset {
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    color-scheme: light dark;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+  [role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-block-size: 100vh;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  img,
+  picture {
+    max-inline-size: 100%;
+    display: block;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+/* for custom property to all size of the screen and base style */
+@layer base {
+  :root {
+
+    --clr-peach: hsl(11, 73%, 66%);
+    --clr-light-peach: hsl(11, 100%, 80%);
+    --clr-black: hsl(270, 3%, 11%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-dark-grey: hsl(264°, 5%, 20%);
+    --clr-light-grey: hsl(210, 17%, 95%);
+
+    --ff: "Jost", sans-serif;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --line-heigth-h1: 3rem;
+    --line-heigth-h2: 3rem;
+    --line-heigth-h3: 1.625rem;
+    --line-heigth-body: 1.625rem;
+
+    --letter-spacing-h2: 2px;
+    --letter-spacing-h3: 5px;
+
+    @media (width < 768px) {
+      --fs-h1: 2rem;
+      --fs-h2: 1.75rem;
+      --fs-h3: 1.25rem;
+
+    }
+
+  }
+
+  html {
+    font-size: 16px;
+
+    @media (width < 768px) {
+      font-size: 15px;
+    }
+  }
+}
+
+/* for the generic propreties  */
+@layer layout {}
