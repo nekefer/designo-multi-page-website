@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <header class="site-header">
+    <header class="wrapper site-header">
       <nav class="primary-navigation">
         <img
           src="./assets/shared/desktop/logo-dark.png"
@@ -38,116 +38,127 @@
     </header>
 
     <main>
-      <section class="site-hero">
-        <div class="hero-content">
-          <h1>Award-winning custom designs and digital branding solutions</h1>
-          <p>
-            With over 10 years in the industry, we are experienced in creating
-            fully responsive websites, app design, and engaging brand
-            experiences. Find out more about our services.
-          </p>
-          <button class="btn" data-theme="dark">Learn more</button>
-        </div>
-        <div class="hero-image">
-          <img
-            src="./assets/home/desktop/image-hero-phone.png"
-            alt="Hero Image"
-          />
-        </div>
+      <section class="site-hero wrapper">
+          <div class="hero-content">
+            <h1>Award-winning custom designs and digital branding solutions</h1>
+            <p>
+              With over 10 years in the industry, we are experienced in creating
+              fully responsive websites, app design, and engaging brand
+              experiences. Find out more about our services.
+            </p>
+            <button class="btn" data-theme="dark">Learn more</button>
+          </div>
+          <div class="hero-image">
+            <img
+              src="./assets/home/desktop/image-hero-phone.png"
+              alt="Hero Image"
+            />
+          </div>
       </section>
       <section class="services">
-        <div class="card">
-          <h2>Web Desing</h2>
-          <p>view projects</p>
-        </div>
-        <div class="card">
-          <h2>App Design</h2>
-          <p>view projects</p>
-        </div>
-        <div class="card">
-          <h2>Graphic Design</h2>
-          <p>view projects</p>
+        <div class="wrapper equal-column">
+          <div class="card">
+            <h2>Web Desing</h2>
+            <p>view projects</p>
+          </div>
+          <div class="card">
+            <h2>App Design</h2>
+            <p>view projects</p>
+          </div>
+          <div class="card">
+            <h2>Graphic Design</h2>
+            <p>view projects</p>
+          </div>
         </div>
       </section>
       <section class="qualifications">
-        <div class="qualification">
-          <img src="./assets/home/desktop/illustration-passionate.svg" alt="" />
-          <h3>Passionate</h3>
-          <p>
-            Each project starts with an in-depth brand research to ensure we
-            only create products that serve a purpose. We merge art, design, and
-            technology into exciting new solutions.
-          </p>
+        <div class="wrapper equal-column">
+          <div class="qualification">
+            <img
+              src="./assets/home/desktop/illustration-passionate.svg"
+              alt=""
+            />
+            <h3>Passionate</h3>
+            <p>
+              Each project starts with an in-depth brand research to ensure we
+              only create products that serve a purpose. We merge art, design,
+              and technology into exciting new solutions.
+            </p>
+          </div>
+          <div class="qualification">
+            <img
+              src="./assets/home/desktop/illustration-resourceful.svg"
+              alt=""
+            />
+            <h3>Resourceful</h3>
+            <p>
+              Everything that we do has a strategic purpose. We use an agile
+              approach in all of our projects and value customer collaboration.
+              It guarantees superior results that fulfill our clients' needs.
+            </p>
+          </div>
+          <div class="qualification">
+            <img src="./assets/home/desktop/illustration-friendly.svg" alt="" />
+            <h3>Friendly</h3>
+            <p>
+              We are a group of enthusiastic folks who know how to put people
+              first. Our success depends on our customers, and we strive to give
+              them the best experience a company can provide.
+            </p>
+          </div>
         </div>
-        <div class="qualification">
-          <img
-            src="./assets/home/desktop/illustration-resourceful.svg"
-            alt=""
-          />
-          <h3>Resourceful</h3>
-          <p>
-            Everything that we do has a strategic purpose. We use an agile
-            approach in all of our projects and value customer collaboration. It
-            guarantees superior results that fulfill our clients' needs.
-          </p>
-        </div>
-        <div class="qualification">
-          <img src="./assets/home/desktop/illustration-friendly.svg" alt="" />
-          <h3>Friendly</h3>
-          <p>
-            We are a group of enthusiastic folks who know how to put people
-            first. Our success depends on our customers, and we strive to give
-            them the best experience a company can provide.
-          </p>
-        </div>
-      </section>
-      <section class="hero call-to-action" data-position="button">
-        <div>
-          <div>Let's talk about your project</div>
-          <p>
-            Ready to take it to the next level? Contact us today and find out
-            how our expertise can help your business grow.
-          </p>
-        </div>
-        <button class="btn" data-theme="dark">Get in touch</button>
       </section>
     </main>
 
     <footer>
-      <div>
-        <nav class="footer-navigation">
-          <img
-            src="./assets/shared/desktop/logo-light.png"
-            alt="Designo Logo"
-          />
-          <ul>
-            <li><a href="#">Our Company</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer-content">
-        <div class="footer-content-left">
-          <div class="footer-location">
-            <p>Designo Central Office</p>
-            <p>3886 Wellington Street</p>
-            <p>Toronto, Ontario M9C 3J5</p>
+      <section class="hero call-to-action" data-position="button">
+        <div class="wrapper">
+          <div>
+            <div>Let's talk about your project</div>
+            <p>
+              Ready to take it to the next level? Contact us today and find out
+              how our expertise can help your business grow.
+            </p>
           </div>
-          <div class="footer-contact">
-            <p>Contact Us (Central Office)</p>
-            <p>P : +1 253-863-8967</p>
-            <p>M : contact@designo.co</p>
+          <button class="btn" data-theme="dark">Get in touch</button>
+        </div>
+      </section>
+      <section>
+        <div>
+          <nav class="footer-navigation">
+            <img
+              src="./assets/shared/desktop/logo-light.png"
+              alt="Designo Logo"
+            />
+            <ul>
+              <li><a href="#">Our Company</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-content">
+          <div class="footer-content-left">
+            <div class="footer-location">
+              <p>Designo Central Office</p>
+              <p>3886 Wellington Street</p>
+              <p>Toronto, Ontario M9C 3J5</p>
+            </div>
+            <div class="footer-contact">
+              <p>Contact Us (Central Office)</p>
+              <p>P : +1 253-863-8967</p>
+              <p>M : contact@designo.co</p>
+            </div>
+          </div>
+          <div class="footer-content-right">
+            <img src="./assets/shared/desktop/icon-facebook.svg" alt="" />
+            <img src="./assets/shared/desktop/icon-youtube.svg" alt="" />
+            <img src="./assets/shared/desktop/icon-twitter.svg" alt="" />
+            <img src="./assets/shared/desktop/icon-pinterest.svg" alt="" />
+            <img src="./assets/shared/desktop/icon-instagram.svg" alt="" />
           </div>
         </div>
-        <div class="footer-content-right">
-          <img src="./assets/shared/desktop/icon-facebook.svg" alt="" />
-          <img src="./assets/shared/desktop/icon-youtube.svg" alt="" />
-          <img src="./assets/shared/desktop/icon-twitter.svg" alt="" />
-          <img src="./assets/shared/desktop/icon-pinterest.svg" alt="" />
-          <img src="./assets/shared/desktop/icon-instagram.svg" alt="" />
-        </div>
-      </div>
+      </section>
     </footer>
   </body>
 </html>
