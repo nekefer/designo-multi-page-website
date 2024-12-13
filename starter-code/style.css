@@ -93,7 +93,7 @@
     --fs-h3: 1.25rem;
     --fs-a: 0.875rem;
     --fs-body: 1rem;
-    
+
 
     --line-heigth-h1: 3rem;
     --line-heigth-h2: 3rem;
@@ -143,93 +143,60 @@
   }
 
 
-  a{
+  a {
     font-size: var(--fs-a);
     line-height: var(--line-heigth-h3);
     color: var(--clr-dark-grey);
     letter-spacing: var(--letter-spacing-h2);
     text-decoration: none;
   }
-  a:hover, a:focus-visible{
-   text-decoration: underline; 
-   text-decoration-color: var(--clr-dark-grey);
-   /* text-decoration-thickness: 1px; */
+
+  a:hover,
+  a:focus-visible {
+    text-decoration: underline;
+    text-decoration-color: var(--clr-dark-grey);
+    /* text-decoration-thickness: 1px; */
   }
 
-  ul{
+  ul {
     list-style: none;
   }
 
 
-  
+
 }
 
-@layer components{
-  header{
-    position: relative;
-    margin-block-start: 64px;
-  }
-
-  nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    ul{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.625rem;
-      margin: 0;
-    }
-    img{
-      width: 220px;
-    }
-    a{
-      position: relative;
-    }
-  }
-  
-  .site-hero{
-    display: flex;
-    align-items: center;
-    background-color: var(--clr-peach);
-    background-image: url('./assets/home/desktop/bg-pattern-hero-home.svg');
-    background-repeat:no-repeat ;
-    background-position: right;
-    background-size: contain;
-    border-radius: 15px;
-    color: var(--clr-white);
-  }
-
-  
-}
 
 /* for the generic propreties  */
 @layer layout {
-  main{
+  main {
     padding-block: 4.2rem 10rem;
   }
+
   /* float between section in the main */
-  main > * + *{
+  main>*+* {
     padding-block-start: 10rem;
   }
+
   .wrapper {
     --wrapper-width: 686px;
 
     max-width: calc(var(--wrapper-width) + 5rem);
     margin-inline: auto;
-    padding-inline: 2.5rem;
-    
+    /* padding-inline: 2.5rem; */
+
 
     @media (width > 760px) {
       --wrapper-width: 1111px;
 
     }
   }
-   .section {
+
+  .section {
     padding-block: 5rem;
   }
-  
-  .equal-column{
+
+  .equal-column {
     display: grid;
     gap: var(--equal-column-gap, 1.875rem);
 
@@ -237,12 +204,114 @@
       grid-auto-flow: column;
       grid-auto-columns: 1fr;
     }
-    
+
 
   }
 
 
 }
+
+
+@layer components {
+  header {
+    position: relative;
+    margin-block-start: 64px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.625rem;
+      margin: 0;
+    }
+
+    img {
+      width: 220px;
+    }
+
+    a {
+      position: relative;
+    }
+  }
+
+  .site-hero {
+    height: 640px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* padding-inline: 96px; */
+    background-color: var(--clr-peach);
+    background-image: url('./assets/home/desktop/bg-pattern-hero-home.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    border-radius: 15px;
+    color: var(--clr-white);
+  }
+
+  .hero-content {
+    position: relative;
+    width: 50%;
+    height: auto;
+    margin-left: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+
+    p {
+      text-wrap: balance;
+    }
+
+  }
+
+  .hero-image {
+    height: 100%;
+    overflow-y: hidden;
+
+  }
+
+  button {
+    height: 52px;
+    width: 152px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    &[data-theme="dark"] {
+      color: var(--clr-dark-grey);
+      background-color: white;
+    }
+
+    &[data-theme="light"] {
+      color: var(--clr-white);
+      background-color: var(--clr-peach);
+    }
+
+
+  }
+
+  button:hover,
+  button:focus-visible {
+    color: var(--clr-white);
+    background-color: var(--clr-light-peach);
+
+
+  }
+
+
+}
+
 
 @layer utilities {
   .visually-hidden {
