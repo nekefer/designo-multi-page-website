@@ -146,7 +146,7 @@
   a {
     font-size: var(--fs-a);
     line-height: var(--line-heigth-h3);
-    color: var(--clr-dark-grey);
+    /* color: var(--clr-dark-grey); */
     letter-spacing: var(--letter-spacing-h2);
     text-decoration: none;
   }
@@ -155,7 +155,6 @@
   a:focus-visible {
     text-decoration: underline;
     text-decoration-color: var(--clr-dark-grey);
-    /* text-decoration-thickness: 1px; */
   }
 
   ul {
@@ -229,6 +228,13 @@
     gap: 21px;
   }
 
+  .line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-dark-grey);
+    margin: 40px 0 31px ;
+  }
+
 
 }
 
@@ -239,10 +245,13 @@
     margin-block-start: 64px;
   }
 
+
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-transform: uppercase;
+
 
     ul {
       display: flex;
@@ -258,7 +267,16 @@
     a {
       position: relative;
     }
+
+    &.primary-navigation a {
+      color: var(--clr-dark-grey)
+    }
+
+    &.footer-navigation a {
+      color: var(--clr-white);
+    }
   }
+
 
   .site-hero {
     height: 640px;
@@ -380,6 +398,50 @@
       text-align: center;
     }
 
+  }
+
+  footer {
+    --height-footer: 393px;
+    --space-btnCta-btnFooter: 321px;
+    --height-cta: 292px;
+    --point: calc(var(--height-cta) - (var(--height-footer) - var(--space-btnCta-btnFooter)));
+    z-index: 1;
+  }
+
+  .call-to-action {
+
+
+    height: var(--height-cta);
+    background-image: linear-gradient(to bottom, white var(--point), black var(--point), black 100%);
+    z-index: 2;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      background-color: var(--clr-peach);
+      border-radius: 15px;
+      background-image: url('./assets/shared/desktop/bg-pattern-call-to-action.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+
+    }
+
+    .cta-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10PX;
+      width: 40%;
+      color: white;
+    }
+  }
+
+
+  footer>.call-to-action+section {
+    padding-top: calc(var(--height-footer) - var(--space-btnCta-btnFooter));
+    background-color: black;
   }
 
 
