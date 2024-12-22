@@ -175,13 +175,50 @@
 /* for the generic propreties  */
 @layer layout {
   main {
+    position: relative;
     padding-block: 4.2rem 10rem;
+
+
+    @media screen and (min-width : 760px) {
+      background-image: url('./assets/shared/desktop/bg-pattern-leaf.svg');
+      background-repeat: no-repeat;
+      background-position-y: 327px ;
+      background-size: contain;
+    }
   }
 
   /* float between section in the main */
   main>*+* {
     padding-block-start: 10rem;
   }
+
+  @media (width > 760px) {
+    main::before{
+      content: '';
+      position: absolute;
+      top: 146px;
+      width: 100%;
+      height: 100%;
+      background-image: url('./assets/shared/desktop/bg-pattern-leaf.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform-origin: center;
+      transform: rotate(180deg);
+      z-index: -1;
+
+    }
+  }
+
+  @media (width > 1006px) {
+    main, main::before{
+     background-size: auto; 
+    }
+    
+  }
+
+
+  
+
 
   .wrapper {
     --wrapper-width: 686px;
@@ -412,7 +449,7 @@
 
 
     height: var(--height-cta);
-    background-image: linear-gradient(to bottom, white var(--point), black var(--point), black 100%);
+    background-image: linear-gradient(to bottom, transparent var(--point), black var(--point), black 100%);
     z-index: 2;
 
     .wrapper {
@@ -443,6 +480,39 @@
     padding-top: calc(var(--height-footer) - var(--space-btnCta-btnFooter));
     background-color: black;
   }
+
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 72px;
+    font-weight: 500 ;
+    font-size: var(--fs-body);
+    line-height: var(--line-heigth-body);
+
+    
+    .footer-social-media{
+      display: flex;
+      align-self: flex-end;
+      justify-content: space-between;
+      gap:  16px;
+    }
+  }
+  .footer-address{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .footer-location, .footer-contact{
+    color: var(--clr-white);
+    opacity: 50%;
+
+    p:first-child{
+      font-weight: bold;
+    }
+  }
+
 
 
 
