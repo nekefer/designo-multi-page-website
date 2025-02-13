@@ -23,7 +23,8 @@
 
   <body>
     <header class="wrapper site-header">
-      <nav class="primary-navigation">
+      
+      <nav class="primary-navigation" id="primary-navigation">
         <img
           src="./assets/shared/desktop/logo-dark.png"
           alt="Designo Logo"
@@ -34,6 +35,13 @@
           <li><a href="#">Locations</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+        <button aria-controls="primary-navigation" aria-expanded="false">
+          <img
+            src="./assets/shared/mobile/icon-hamburger.svg"
+            alt="Hamburger Icon"
+            class="hamburger"
+          />
+        </button>
       </nav>
     </header>
 
@@ -177,5 +185,6 @@
         </div>
       </section>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
